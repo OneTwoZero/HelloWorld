@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="HelloWorld_GitTest:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="HelloWorld_GitTest.war">
+      <element id="artifact" artifact-name="HelloWorld_GitTest:war exploded" />
+    </root>
+  </artifact>
+</component>
