@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+/HelloWorld_GitTest.iml
+/HelloWorld_GitTest/HelloWorld_GitTest.iml
+/HelloWorld_GitTest/.idea
+=======
 
 .idea
 
@@ -22,6 +27,4 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
 
