@@ -164,7 +164,7 @@
 
         <dependency>
             <groupId>com.oracle</groupId>
-            <artifactId>ojdbc14</artifactId>
+            <artifactId>ojdbc6</artifactId>
             <version>${oracle.version}</version>
         </dependency>
 
@@ -172,11 +172,6 @@
             <groupId>javax.annotation</groupId>
             <artifactId>jsr250-api</artifactId>
             <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.itheima</groupId>
-            <artifactId>itheima_ssm_service</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <build>
@@ -198,11 +193,11 @@
     </build>
 
     <modules>
-        <module>itheima_ssm_web</module>
         <module>itheima_ssm_service</module>
         <module>itheima_ssm_dao</module>
         <module>itheima_ssm_utils</module>
         <module>itheima_ssm_domain</module>
+        <module>itheima_ssm_web2</module>
     </modules>
 
 </project>

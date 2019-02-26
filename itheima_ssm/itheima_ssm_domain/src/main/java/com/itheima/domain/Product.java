@@ -1,5 +1,8 @@
 package com.itheima.domain;
 
+import com.itheima.utils.DateUtils;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -28,6 +31,7 @@ public class Product implements Serializable {
     /**
      * 出发时间
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date departureTime;
 
     private String departureTimeStr;
@@ -40,9 +44,14 @@ public class Product implements Serializable {
      */
     private String productDesc;
     /**
-     * 产品状态
+     * 产品状态 0 关闭 1 开启
      */
     private Integer productStatus;
+    /**
+     * 状态描述
+     */
+    private String productStatusStr;
+
 
     @Override
     public String toString() {
@@ -101,6 +110,9 @@ public class Product implements Serializable {
     }
 
     public String getDepartureTimeStr() {
+        if (departureTime != null) {
+            departureTimeStr = DateUtils.date2Str(departureTime, "yyyy-MM-dd HH:mm:ss");
+        }
         return departureTimeStr;
     }
 
@@ -133,6 +145,13 @@ public class Product implements Serializable {
     }
 
     public String getProductStatusStr() {
+        if (productStatus != null) {
+            if (productStatus == 0) {
+                productStatusStr = "关闭";
+            } else if(productStatus == 1){
+                productStatusStr = "开启";
+            }
+        }
         return productStatusStr;
     }
 
@@ -140,8 +159,5 @@ public class Product implements Serializable {
         this.productStatusStr = productStatusStr;
     }
 
-    /**
-     * 状态描述
-     */
-    private String productStatusStr;
+
 }
